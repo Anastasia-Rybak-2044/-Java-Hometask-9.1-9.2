@@ -2,6 +2,7 @@ package ru.netology.domain;
 
 public class CommentsInfo {
     private boolean canComment;
+    private int groupsCanPost; //информация о том, могут ли сообщества комментировать запись;
     int commentID;
     int commentAuthorID;
     int commentTime;
@@ -10,6 +11,9 @@ public class CommentsInfo {
     private boolean canEdit;
     private boolean canDelete;
     private boolean canReply;
+    private int groupsCanPost; //информация о том, могут ли сообщества комментировать запись
+    private boolean canOpen; // может ли текущий пользователь открыть комментарии к записи
+    private boolean canClose; //может ли текущий пользователь закрыть комментарии к записи
     private String reference; // reference to an external site
 
     public boolean isCanComment() {
@@ -18,6 +22,38 @@ public class CommentsInfo {
 
     public void setCanComment(boolean canComment) {
         this.canComment = canComment;
+    }
+
+    public int getGroupsCanPost() {
+        return groupsCanPost;
+    }
+
+    public void setGroupsCanPost(int groupsCanPost) {
+        this.groupsCanPost = groupsCanPost;
+    }
+
+    public boolean isCanOpen() {
+        return canOpen;
+    }
+
+    public void setCanOpen(boolean canOpen) {
+        this.canOpen = canOpen;
+    }
+
+    public boolean isCanClose() {
+        return canClose;
+    }
+
+    public void setCanClose(boolean canClose) {
+        this.canClose = canClose;
+    }
+
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
     }
 
     public int getCommentID() {
@@ -82,13 +118,5 @@ public class CommentsInfo {
 
     public void setCanReply(boolean canReply) {
         this.canReply = canReply;
-    }
-
-    public String getReference() {
-        return reference;
-    }
-
-    public void setReference(String reference) {
-        this.reference = reference;
     }
 }

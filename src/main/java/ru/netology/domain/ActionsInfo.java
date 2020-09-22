@@ -1,65 +1,12 @@
 package ru.netology.domain;
 
 public class ActionsInfo {
-    private boolean canLike;
-    private int likesCounter;
-    private int likeAuthorID;
-    private boolean canRepost;
-    private int repostAuthorID;
-    private  int repostCounter;
     private int canHide; // hide a post
     private boolean canEdit;
     private boolean canDelete;
     private boolean canComplain; // put a complaint on an inappropriate content
-    private boolean canSave;
-
-    public boolean isCanLike() {
-        return canLike;
-    }
-
-    public void setCanLike(boolean canLike) {
-        this.canLike = canLike;
-    }
-
-    public int getLikesCounter() {
-        return likesCounter;
-    }
-
-    public void setLikesCounter(int likesCounter) {
-        this.likesCounter = likesCounter;
-    }
-
-    public int getLikeAuthorID() {
-        return likeAuthorID;
-    }
-
-    public void setLikeAuthorID(int likeAuthorID) {
-        this.likeAuthorID = likeAuthorID;
-    }
-
-    public boolean isCanRepost() {
-        return canRepost;
-    }
-
-    public void setCanRepost(boolean canRepost) {
-        this.canRepost = canRepost;
-    }
-
-    public int getRepostAuthorID() {
-        return repostAuthorID;
-    }
-
-    public void setRepostAuthorID(int repostAuthorID) {
-        this.repostAuthorID = repostAuthorID;
-    }
-
-    public int getRepostCounter() {
-        return repostCounter;
-    }
-
-    public void setRepostCounter(int repostCounter) {
-        this.repostCounter = repostCounter;
-    }
+    private boolean canPin;
+    private int isPinned; //информация о том, что запись закреплена
 
     public int getCanHide() {
         return canHide;
@@ -93,11 +40,19 @@ public class ActionsInfo {
         this.canComplain = canComplain;
     }
 
-    public boolean isCanSave() {
-        return canSave;
+    public boolean isCanPin() {
+        return canPin;
     }
 
-    public void setCanSave(boolean canSave) {
-        this.canSave = canSave;
+    public void setCanPin(boolean canPin) {
+        this.canPin = canPin;
+    }
+
+    public int getIsPinned() {
+        return isPinned;
+    }
+
+    public void setIsPinned(int isPinned) {
+        this.isPinned = isPinned;
     }
 }
